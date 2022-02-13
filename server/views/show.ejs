@@ -1,0 +1,30 @@
+<%- include("header") -%>
+<%- include("header") -%>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand displa-1">Gallery</a>
+  </div>
+</nav>
+<div class="pt-5 vh-100" style="background-color: rgb(211, 209, 209);"> 
+  <h1 class="text-center py-2 display-4 mb-5">Image Details</h1>
+  <div class="card m-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="<%= num.url %>" class="img-fluid rounded-start" alt="..." width="500" height="600">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title h2"><%= num.name %></h5>
+          <p class="card-text"><%= num.description %></p>
+          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          <a href="/<%= num._id %>/edit"><button type="button" class="btn btn-secondary align-bottom">Edit</button></a>
+          <form action="/delete/<%= num._id %>" method="post" class="pt-2">
+          <button type="submit" class="btn btn-warning align-bottom">Delete</button></form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

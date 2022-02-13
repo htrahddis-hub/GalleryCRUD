@@ -1,0 +1,38 @@
+<%- include("header") -%>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand displa-1">Gallery</a>
+    <form class="d-flex" action="/" method="get">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="pt-5 vh-100" style="background-color: rgb(211, 209, 209);min-height: 100%;
+height: auto !important;
+height: 100%;"> 
+  <h1 class="text-center py-2 display-4">Images</h1>
+<div class="row px-5">
+  <% for(let i=(page-1)*6;i<num.length&&i<(page*6);i++) { %>
+    <a class="col-sm-4 p-2 text-decoration-none" href="/show/<%= num[i]._id %>">
+    <div class="card text-dark bg-light mb-3" style="width: 25rem;">
+      <img src="<%= num[i].url %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%=  num[i].name  %></h5>
+        <p class="card-text text-truncate"><%=  num[i].description  %></p>
+      </div>
+    </div>
+  </a>
+  <% } %>
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <% for(let i=0;i<num.length/6;i++) { %>
+    <li class="page-item"><a class="page-link" href="/?page=<%= Math.ceil(i/6+1) %>"><%= Math.ceil(i/6+1) %></a></li>
+    <% } %>
+  </ul>
+</nav>
+<p class="text-center fs-5 pb-5">Wanna add more images??Click <a href="/new">here</a></p>
+</div>
+</body>
+</html>
