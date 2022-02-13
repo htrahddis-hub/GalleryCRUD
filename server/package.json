@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A Gallery CRUD app",
   "main": "index.js",
+  "engines": {
+    "node": "16.x",
+    "npm" : "8.x"
+  },
   "scripts": {
     "start": "nodemon index.js"
   },
