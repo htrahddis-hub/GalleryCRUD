@@ -29,12 +29,12 @@ http://gallerycrud.herokuapp.com/
 <!-- Snippets -->
 # Snippets
 ## Home Page
-![Home page](./public/home.png)
+![Home page](./ScreenShots/home.png)
 ## Details Page
-![Home Page](./public/Details.png)
+![Home Page](./ScreenShots/Details.png)
  
 ## Add Image Page
-![Add Page](./public//form.png)
+![Add Page](./ScreenShots//form.png)
 
 
 # Deployement:-
