@@ -34,7 +34,7 @@ router.get('/show/:id',async(req,res,next)=>{
     res.render('show',{num:image});
   }
   catch(err){
-    console.log(err);
+    res.send('bad parameters');
   }
 });
 
@@ -92,15 +92,5 @@ router.post('/delete/:id',async(req,res,next)=>{
   }
 });
 
-// router.get('/search/:name',async(req,res,next)=>{
-//   try{
-//     const images =await ImageModel.findOne({ name: req.params.name}).lean();
-//     console.log(images);
-//     //res.redirect('/');
-//   }
-//   catch(err){
-//     console.log(err);
-//   }
-// });
 
 module.exports = router;
