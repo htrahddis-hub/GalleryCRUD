@@ -24,7 +24,7 @@ router.get('/',async(req,res,next)=>{
     }
   }
   catch(err){
-    console.log(err);
+    res.send('bad parameters');
   }
 });
 
@@ -43,7 +43,7 @@ router.get('/new',async(req,res,next)=>{
     res.render('form',{});
   }
   catch(err){
-    console.log(err);
+    res.send('bad parameters');
   }
 });
 
@@ -54,7 +54,7 @@ router.post('/',async(req,res,next)=>{
     res.redirect('/');
   }
   catch(err){
-    console.log(err);
+    res.send('bad parameters');
   }
 });
 
@@ -64,7 +64,7 @@ router.get('/:id/edit',async(req,res,next)=>{
     res.render('edit',{num:image});
   }
   catch(err){
-    console.log(err);
+    res.send('bad parameters');
   }
 });
 
@@ -76,7 +76,7 @@ router.post('/:id/edit',async(req,res,next)=>{
     res.redirect('/');
   }
   catch(err){
-    console.log(err);
+    res.send('bad parameters');
   }
 });
 
@@ -88,7 +88,7 @@ router.post('/delete/:id',async(req,res,next)=>{
     res.redirect('/');
   }
   catch(err){
-    console.log(err);
+    res.send('bad parameters');
   }
 });
 

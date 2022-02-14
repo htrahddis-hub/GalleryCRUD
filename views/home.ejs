@@ -25,6 +25,9 @@ height: 100%;">
   </a>
   <% } %>
 </div>
+<% if(num.length===0) { %>
+  <p class="h3">No Image found</p>
+  <% } %>
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <% for(let i=0;i<num.length/6;i++) { %>
