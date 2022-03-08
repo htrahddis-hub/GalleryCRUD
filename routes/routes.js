@@ -50,7 +50,10 @@ router.get('/new',async(req,res,next)=>{
 router.post('/',async(req,res,next)=>{
   try{
     const img=req.body;
-    const Img=await ImageModel.create(img);
+    if(req.body.url)
+      await ImageModel.create(img);
+    else
+      req.body.url="https://cdn.pixabay.com/photo/2017/06/08/17/32/not-found-2384304_960_720.jpg";
     res.redirect('/');
   }
   catch(err){
