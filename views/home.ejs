@@ -15,7 +15,7 @@ height: 100%;">
 <div class="row px-5">
   <% for(let i=(page-1)*6;i<num.length&&i<(page*6);i++) { %>
     <a class="col-sm-4 p-2 text-decoration-none" href="/show/<%= num[i]._id %>">
-    <div class="card text-dark bg-light mb-3" style="width: 25rem;">
+    <div class="card text-dark bg-light mb-3" style="width: 25rem; min-height: 270px;">
       <img src="<%= num[i].url %>" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><%=  num[i].name  %></h5>
