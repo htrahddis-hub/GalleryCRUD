@@ -5,3 +5,8 @@
 .back{
   background-color: rgb(221, 225, 248);
 }
+@media (max-width: 406px) {
+  body {
+    padding-top: 40px;
+  }
+}
